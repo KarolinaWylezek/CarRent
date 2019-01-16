@@ -9,20 +9,25 @@
 Rental::Rental()
 {
 }
-string Rental::OutputAllCars()
+string Rental::OutputCar()
 {
 	string result = "";
+	int i = 1;
 	for (list<Car<PLN>>::iterator it = carRepo.CarsList.begin(); it != carRepo.CarsList.end(); ++it)
 	{
 		
-		result += "Model: " + (*it).Model + " rejestracja: " + (*it).Registration_number +
-			" Fuel: " + std::to_string((*it).Fuel) + " Price: " + std::to_string((*it).Price->Amount);
-		if ((*it).Availability == 1)
-			result += " available ";
-		else
-			result += " not dostepne ";
-		result += '\n';
+		if ((*it).Availability == 1) {
+			result += std::to_string(i) + ". " + " Model: " + (*it).Model + " rejestracja: " + (*it).Registration_number +
+				" Fuel: " + std::to_string((*it).Fuel) + " Price: " + std::to_string((*it).Price->Amount);
+			i++;
+			result += '\n';
+		}
 
+
+		else
+			continue;
+		
+		
 	}
 	return result;
 

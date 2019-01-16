@@ -6,13 +6,14 @@ using namespace std;
 
 class Rental
 {
-	CarRepo carRepo;
-	ClientsRepo clientsRepo;
 	
 public:
+
+	CarRepo carRepo;
+	ClientsRepo clientsRepo;
 	Rental();
 	~Rental();
-	string OutputAllCars();
+	string OutputCar();
 	string OutputAllClients();
 };
 

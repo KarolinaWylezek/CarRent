@@ -12,6 +12,21 @@ ClientsRepo::ClientsRepo()
 	ClientsList.push_back(client2);
 }
 
+Client* ClientsRepo::FindClient(string name, string surname) {
+	for (list<Client>::iterator it = ClientsList.begin(); it != ClientsList.end(); ++it) {
+		if (name == (*it).Name && surname == (*it).Surname)
+			return &(*it);
+	}
+	return NULL;
+}
+
+void ClientsRepo::AddClient(string name, string surname, double debt)
+{
+	
+	Client client = Client(name, surname, debt);
+	ClientsList.push_back(client);
+}
+}
 
 
 ClientsRepo::~ClientsRepo()

@@ -36,9 +36,6 @@
     <ClInclude Include="PLN.h">
       <Filter>Header Files\Currency</Filter>
     </ClInclude>
-    <ClInclude Include="Euro.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Repo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -54,6 +51,9 @@
     <ClInclude Include="ClientsRepo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Euro.h">
+      <Filter>Header Files\Currency</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -65,14 +65,8 @@
     <ClCompile Include="Car.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PLN.cpp">
-      <Filter>Source Files\Currency</Filter>
-    </ClCompile>
     <ClCompile Include="Currency.cpp">
       <Filter>Source Files\Currency</Filter>
-    </ClCompile>
-    <ClCompile Include="Euro.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Repo.cpp">
       <Filter>Source Files</Filter>
@@ -87,6 +81,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ClientsRepo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Euro.cpp">
+      <Filter>Source Files\Currency</Filter>
+    </ClCompile>
+    <ClCompile Include="PLN.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

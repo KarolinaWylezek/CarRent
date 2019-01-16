@@ -16,7 +16,7 @@ public:
 		Availability = availability;
 
 		
-		// :0
+		// 
 
 		Price = new T(price);
 		//    ^  ^ to stworzy nowy obiekt klasy T

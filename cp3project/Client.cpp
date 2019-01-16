@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "Client.h"
+#include "Car.h"
+
 
 
 Client::Client(string name, string surname, double debt)
@@ -13,6 +15,8 @@ Client::Client(string name, string surname, double debt)
 
 void Client::RentVehicle(Car<PLN>* rentedCar) {
 	RentedCar = rentedCar;
+	rentedCar->Availability = NULL;
+
 }
 
 Client::~Client()

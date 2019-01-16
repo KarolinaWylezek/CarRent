@@ -12,6 +12,9 @@ class CarRepo :
 {
 public:
 	CarRepo();
+
+	Car<PLN>* FindCar(string);
+	
 	~CarRepo();
 
 

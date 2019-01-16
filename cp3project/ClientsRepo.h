@@ -8,6 +8,8 @@ class ClientsRepo :
 {
 public:
 	ClientsRepo();
+	Client* FindClient(string name, string surname);
+	void AddClient(string name, string surname, double debt);
 	~ClientsRepo();
 	list <Client> ClientsList;
 

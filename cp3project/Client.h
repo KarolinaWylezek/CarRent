@@ -19,3 +19,9 @@ public:
 	void RentVehicle(Car<PLN>* h);
 };
 
+//klient biznesowy i ind. 
+//uprawnienia klienta
+//logowanie sie
+// wypo¿yczone auto - powi¹zanie z klientem (wolne i wypo¿yczone przez danego klienta)
+
+//poczytaæ o u¿ytych kolekcjach - do sprawka (wady i zalety)
