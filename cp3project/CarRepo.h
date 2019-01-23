@@ -3,7 +3,7 @@
 #include <list>
 #include "Car.h"
 #include "PLN.h"
-
+#include "stdafx.h"
 using namespace std;
 
 
@@ -13,12 +13,12 @@ class CarRepo :
 public:
 	CarRepo();
 
-	Car<PLN>* FindCar(string);
+	Car<VLU>* FindCar(string);
 	
 	~CarRepo();
 
 
-	list<Car<PLN>> CarsList;
+	list<Car<VLU>> CarsList;
 	
 
 

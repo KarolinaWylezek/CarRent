@@ -3,17 +3,46 @@
 #include "Car.h"
 #include <string>
 #include "Client.h"
+#include "CarRepo.h"
+#include <fstream>  
 
 
+
+void Rental::RentCar(string registrationNumber)
+{
+
+	Car<VLU>* car = carRepo.FindCar(registrationNumber);
+	if (car == NULL)
+	{
+		throw string("Wrong registration number");
+		
+	}
+	double maxDebt = 1000;
+	if (loggedClient->Debt >= maxDebt) {
+		system("color C");
+		throw string("Your dept is too height. Please take care of your finances.");
+	}
+	car->Availability = false;
+	loggedClient->RentedCar = car;
+	ofstream ofs("Log.txt", ofstream::out);
+	ofs << loggedClient->Name <<" "<< loggedClient->Surname<<" " << "has rented: " << car->Model;
+
+}
+
+void Rental::Login(Client* client)
+{
+	loggedClient = client;
+}
 
 Rental::Rental()
 {
+	loggedClient = NULL;
 }
 string Rental::OutputCar()
 {
 	string result = "";
 	int i = 1;
-	for (list<Car<PLN>>::iterator it = carRepo.CarsList.begin(); it != carRepo.CarsList.end(); ++it)
+	for (list<Car<VLU>>::iterator it = carRepo.CarsList.begin(); it != carRepo.CarsList.end(); ++it)
 	{
 		
 		if ((*it).Availability == 1) {

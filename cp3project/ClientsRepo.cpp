@@ -10,6 +10,8 @@ ClientsRepo::ClientsRepo()
 	ClientsList.push_back(client);
 	Client client2 = Client("Ania", "Kowalski", 200);
 	ClientsList.push_back(client2);
+	Client client3 = Client("Dawid", "Kowalski", 2000);
+	ClientsList.push_back(client3);
 }
 
 Client* ClientsRepo::FindClient(string name, string surname) {
@@ -20,13 +22,13 @@ Client* ClientsRepo::FindClient(string name, string surname) {
 	return NULL;
 }
 
-void ClientsRepo::AddClient(string name, string surname, double debt)
+Client* ClientsRepo::AddClient(string name, string surname, double debt)
 {
-	
 	Client client = Client(name, surname, debt);
 	ClientsList.push_back(client);
+	return &ClientsList.back();
 }
-}
+
 
 
 ClientsRepo::~ClientsRepo()

@@ -13,10 +13,10 @@ public:
 	string Name;
 	string Surname;
 	double Debt;
-	Car<PLN>* RentedCar;
+	Car<VLU>* RentedCar;
 	
 	~Client();
-	void RentVehicle(Car<PLN>* h);
+	void RentVehicle(Car<VLU>* h);
 };
 
 //klient biznesowy i ind. 

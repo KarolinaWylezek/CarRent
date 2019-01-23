@@ -5,7 +5,9 @@ class Euro :
 {
 public:
 	
+	Euro(double amount);
+
 	~Euro();
-	double convert_to_dollars();
+	double convert_to_dolars();
 };
 
