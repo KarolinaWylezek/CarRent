@@ -1,1 +1,3 @@
-a a has rented: adfs
+Anna Nowak has rented: Toyota Corolla
+Jan Raskolnikow has rented: Fiat Panda
+Karol Smith has rented: Honda Civic

@@ -12,12 +12,14 @@ CarRepo::CarRepo()
 {
 	
 	CarsList = list<Car<VLU>>();
-	Car<VLU> car = Car<VLU>(123.0, 34.0,"adfs","adsf", true);
+	Car<VLU> car = Car<VLU>(123.0, 34.0,"Toyota Corolla","A001", true);
 	CarsList.push_back(car);
-	Car<VLU> car2 = Car<VLU>(175.9, 34.0, "uygwdioq", "uiwhio", false);
+	Car<VLU> car2 = Car<VLU>(175.9, 34.0, "Honda Civic", "A002", true);
 	CarsList.push_back(car2);
-	Car<VLU> car3 = Car<VLU>(123.0, 34.0, "adfauhfis", "ahahahadsf", true);
+	Car<VLU> car3 = Car<VLU>(123.0, 34.0, "Fiat Panda", "A003", true);
 	CarsList.push_back(car3);
+	Car<VLU> car4 = Car<VLU>(123.0, 34.0, "Kia Sportage", "A004", true);
+	CarsList.push_back(car4);
 	
 }
 

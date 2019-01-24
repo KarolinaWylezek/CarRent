@@ -24,8 +24,9 @@ void Rental::RentCar(string registrationNumber)
 	}
 	car->Availability = false;
 	loggedClient->RentedCar = car;
-	ofstream ofs("Log.txt", ofstream::out);
-	ofs << loggedClient->Name <<" "<< loggedClient->Surname<<" " << "has rented: " << car->Model;
+	ofstream ofs;
+	ofs.open("Log.txt", std::ios_base::app);
+	ofs << loggedClient->Name <<" "<< loggedClient->Surname<<" " << "has rented: " << car->Model<<'\n';
 
 }
 
@@ -46,7 +47,7 @@ string Rental::OutputCar()
 	{
 		
 		if ((*it).Availability == 1) {
-			result += std::to_string(i) + ". " + " Model: " + (*it).Model + " rejestracja: " + (*it).Registration_number +
+			result += std::to_string(i) + ". " + " Model: " + (*it).Model + " Registration number: " + (*it).Registration_number +
 				" Fuel: " + std::to_string((*it).Fuel) + " Price: " + std::to_string((*it).Price->Amount);
 			i++;
 			result += '\n';
