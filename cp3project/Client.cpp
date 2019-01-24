@@ -13,11 +13,7 @@ Client::Client(string name, string surname, double debt)
 	
 }
 
-void Client::RentVehicle(Car<VLU>* rentedCar) {
-	RentedCar = rentedCar;
-	rentedCar->Availability = NULL;
 
-}
 
 Client::~Client()
 {

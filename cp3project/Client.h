@@ -16,9 +16,9 @@ public:
 	Car<VLU>* RentedCar;
 	
 	~Client();
-	void RentVehicle(Car<VLU>* h);
+
 };
 
 
 
-//poczytaæ o u¿ytych kolekcjach - do sprawka (wady i zalety)
+
