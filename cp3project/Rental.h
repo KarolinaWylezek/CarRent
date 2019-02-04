@@ -16,6 +16,7 @@ public:
 	~Rental();
 
 	void RentCar(string registrationNumber);
+	void ReturnCar(string registrationNumber, string clientsName, string clientsSurname);
 	void Login(Client*);
 	string OutputCar();
 	string OutputAllClients();
