@@ -90,7 +90,7 @@ string Rental::OutputAllClients()
 	for (list <Client>::iterator it = clientsRepo.ClientsList.begin(); it != clientsRepo.ClientsList.end(); ++it)
 	{
 
-		result += "Name: " + (*it).Name + " Surname " + (*it).Surname +
+		result += "Name: " + (*it).Name + " Surname: " + (*it).Surname +
 			" Debt: " + std::to_string((*it).Debt);
 		if ((*it).RentedCar == NULL)
 			result += " Car is not rented";
